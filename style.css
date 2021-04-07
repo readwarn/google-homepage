@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: arial,sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    padding: 6px;
+    margin-bottom: 5px;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+    color: rgba(0,0,0,0.87);
+    margin-right: 12px;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+nav a.account:hover{
+    text-decoration: none;
+}
+nav a.account,nav a.apps{
+    margin-right: 0;
+}
+nav a.account{
+    border-radius: 100%;
+    background: rgb(56, 94, 145);
+    color: #fffffe;
+    font-size: 0.95rem;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav svg.apps{
+    color: #5f6368;
+    fill: currentColor;
+    height: 23px;
+    width: 23px;
+    transform: translateY(4px);
+}
+div.underlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    height: 40px;
+    width: 40px;
+}
+div.underlay:hover{
+    border-radius: 100%;
+    background-color: rgba(60,64,67,0.08);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main img{
+    max-height:92px;
+}
+div.input-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dfe1e5;
+    padding: 0px 16px;
+    border-radius: 24px;
+    height: 44px;
+    width: 90%;
+    margin: 25px 0px;
+    box-shadow: none;
+}
+div.input-container:hover{
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    border-color: rgba(223,225,229,0);
+}
+div.input-container svg.search{
+    color: #9aa0a6;
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}
+div.input-container svg.voice{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+div.input-container input{
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    width: 85%;
+    height: 100%;
+}
+div.btn-container{
+    display: flex;
+    margin:0 auto 15px auto;
+    justify-content: space-between;
+}
+div.btn-container button{
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+div.btn-container button:hover{
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+p.lang{
+    font-size: 0.85rem;
+    text-align: center;
+}
+p.lang a {
+    margin-right: 7px;
+    text-decoration: none;
+    color: #1a0dab;
+}
+p.lang a:hover{
+    text-decoration: underline;
+}
+footer{
+    margin-top: auto;
+    background: #f2f2f2;
+    color: rgba(0,0,0,.54);
+}
+div.foot{
+    padding: 15px 30px;
+    width: 100%;
+    text-align: center;
+}
+div.foot.a{
+    order: 1;
+}
+div.foot.b{
+    order: 0;
+}
+div.foot.c{
+    order: 2;
+}
+div.foot a{
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 10px;
+    color: rgba(0,0,0,.54);
+}
+div.foot a:hover{
+    text-decoration: underline;
+}
+div.foot.naij{
+    border-bottom: 1px solid #dadce0;
+    text-align: left;
+}
+div.foot img{
+     height: 14px;
+}
+div.foot-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:660px) {
+    div.foot{
+        padding: 15px;
+    }
+    div.foot-container{
+        width: 97%;
+        margin: auto;
+    }
+    div.foot.a,div.foot.c{
+        width: auto;
+    }
+    div.input-container{
+        width: 70%;    
+    }
+}
+@media screen and (min-width:900px) {
+    div.foot-container{
+        width: 80%;
+    }
+    div.input-container{
+        width: 60%;    
+    }
+}
+
+@media screen and (min-width:1200px) {
+    div.foot-container{
+        width: 100%;
+    }
+    div.foot{
+        padding: 15px 30px;
+    }
+    div.foot.a,div.foot.c,div.foot.b{
+        width: auto;
+    }
+    div.foot.a{
+        order: 0;
+    }
+    div.foot.b{
+        order: 1;
+    }
+    div.foot.c{
+        order: 2;
+    }
+    div.input-container{
+        width: 45%;    
+    }
+}
